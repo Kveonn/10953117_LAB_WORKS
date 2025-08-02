@@ -1,5 +1,6 @@
 """
 ID: 10953117
+Course: Computer vision
 Name: Osei Samuel Boakye
 This Task loads an image and converts it to Grayscale
 """
