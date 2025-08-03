@@ -5,6 +5,7 @@ Name: Osei Samuel Boakye
 This Task loads an image and converts it to Grayscale
 """
 import cv2
+
 def convert_to_grayscale(input_path):
     # Load the image
     original_image = cv2.imread(input_path)
@@ -25,11 +26,10 @@ def convert_to_grayscale(input_path):
     cv2.destroyAllWindows()
     
     # Save the grayscale image
-    output_path = input_path.replace('.jpg', '_gray.jpg')
+    output_path = "Photo_gray.jpg"
     cv2.imwrite(output_path, gray_image)
     print(f"Grayscale image saved as {output_path}")
 
-# Example usage
 if __name__ == "__main__":
-    input_image_path = "photo.jpg"  # Change this to your image path
+    input_image_path = "Photo.jpg" 
     convert_to_grayscale(input_image_path)
