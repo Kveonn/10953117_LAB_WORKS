@@ -1,6 +1,6 @@
 """
 ID: 10953117
-COURSE: COMPUTER VERSION 
+COURSE: COMPUTER VISION 
 NAME: OSEI SAMUEL BOAKYE
 """
 import cv2
@@ -9,7 +9,7 @@ import os
 
 def main():
     # Load color image
-    image_path = "photo.jpg"  # Change this to your image path
+    image_path = "Photo.jpg"  
     image = cv2.imread(image_path)
     
     if image is None:
@@ -22,7 +22,7 @@ def main():
     lab = cv2.cvtColor(image, cv2.COLOR_BGR2LAB)
     rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)  # For display
     
-    # Display each converted image
+    # now we will display each converted image
     fig, axes = plt.subplots(2, 2, figsize=(10, 8))
     
     axes[0, 0].imshow(rgb)
@@ -45,9 +45,9 @@ def main():
     plt.show()
     
     # Save each converted image
-    cv2.imwrite('photo_grayscale.jpg', grayscale)
-    cv2.imwrite('photo_hsv.jpg', cv2.cvtColor(hsv, cv2.COLOR_HSV2BGR))
-    cv2.imwrite('photo_lab.jpg', cv2.cvtColor(lab, cv2.COLOR_LAB2BGR))
+    cv2.imwrite('Photo_grayscale.jpg', grayscale)
+    cv2.imwrite('Photo_hsv.jpg', cv2.cvtColor(hsv, cv2.COLOR_HSV2BGR))
+    cv2.imwrite('Photo_lab.jpg', cv2.cvtColor(lab, cv2.COLOR_LAB2BGR))
     
     # Plot histogram of grayscale image
     plt.figure(figsize=(8, 6))
@@ -59,9 +59,9 @@ def main():
     plt.show()
     
     print("Images saved:")
-    print("- photo_grayscale.jpg")
-    print("- photo_hsv.jpg")
-    print("- photo_lab.jpg")
+    print("- Photo_grayscale.jpg")
+    print("- Photo_hsv.jpg")
+    print("- Photo_lab.jpg")
 
 if __name__ == "__main__":
     main()
